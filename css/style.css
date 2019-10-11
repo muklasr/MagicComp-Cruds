@@ -1,0 +1,220 @@
+/*z-index
+#njobo 5
+#header 3
+#sidebar 4
+ */
+body, html {
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     font-family: sans-serif;
+}
+#wadah {  /*dinggo madahi header & isi*/
+    transition: margin-left .5s;
+    margin: 0 0 0 0;
+    min-height: 100%;
+    height: 100%;
+}
+/*---------------------Untuk header.css--------------------*/
+#sidebar {
+     width: 0px;
+     height:100%;
+     background: #818181;
+     transition: 0.5s;
+     position: fixed;    /*ben pas discroll ora melu munggah/medun*/
+     overflow-x: hidden;
+     z-index: 4;
+}
+.nav {    /*navigasi ning sidebar(buku,anggota,peminjaman,denda, lain-lain)*/
+     color:white;
+     text-decoration: none;
+     display: block;
+     border-bottom: inset 1px black;
+     padding: 10 10 10 15;
+     margin: 0 5 0 5;
+}
+.nav:hover {   /*Efek pas navigasine diklik*/
+     background-color: black;
+     font-size: 20px;
+     padding: 8 10 7 15;
+}
+.nav:first-of-type { /*tulisan MENU nggon navigasi(nduwure gambar)*/
+     cursor: default;
+     margin: 0 0 0 0;
+     padding: 10 10 7 25;
+     font-size: 30px;
+     font-weight: 500;
+     font-family: cursive;
+     text-decoration: none;   /*ngilangi garis bawah*/
+     color: white;
+     background: #1976d2;
+}
+#tutup {
+    visibility: hidden;
+    position: absolute;
+}
+#buka {
+    visibility: visible;
+    /*position: absolute;*/
+}
+#hkanan { /*header sisih tengen*/
+     float: right;
+}
+#tulisan {
+     display: inline-block;
+}
+header {
+     cursor: default;    /*ben kursore dadi anak panah pas ning nduwure*/
+     position: fixed;    /*ben pas discroll ora melu munggah/medun*/
+     color: grey;        /*warna tulisan/foreground*/
+     z-index: 3;
+     min-height: 50px;   /*tinggi minimal, dadine paling cilik duwure 50px*/
+     max-height: 50px;
+     width: 100%;        /*lebare ngebaki browser*/
+     background: #64b5f6;
+     vertical-align: middle;
+     box-shadow: 0.5px 0px 10px 1px black; /*menehi efek bayangan. penulisan= horizontal vertikal blur spread warna*/
+}
+/*---------------------Untuk Tampil.css--------------------*/
+#isi {
+     padding: 62 5 5 5;
+     min-height:87%;
+}
+.tg {
+    float: right;
+    margin: 0 5 3 0;
+}
+#golek, #gaksida {
+    background:#64b5f6;
+    color: white;
+    padding: 5 10 5 10;
+    border-radius: 20%;
+    cursor: pointer;
+    z-index: 2;
+}
+#gaksida {
+    display: none;
+    position: absolute;
+}
+.txtgolek {
+    display: none;
+    position: absolute;
+    width: 200px;
+    padding: 2 2 0 2;
+}
+h3 {
+    display: inline;
+    position: absolute;
+    z-index: 2;
+}
+.btnTambah {
+    background:#64b5f6;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 9 10 5 10;
+    text-decoration: none;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 35%;
+}
+.btnTambah:active, #golek:active, #gaksida:active {
+    background: blue;
+}
+#ndastabel {
+    background-color: #A7C942;
+    color: white;
+    padding:5 15 5 15;
+    text-align: center;
+}
+td {
+    padding: 5 15 5 15;
+}
+.ngisor {
+    background: rgba(0,0,0,0.1);
+}
+#tabel img, .tabel a{
+    padding: 0 0 0 0;
+}
+#tabel {
+    width: 100%;
+    margin: 0 0 20 0;
+    box-shadow: 0.08px 0px 15px 0 rgba(0,0,0,0.5);
+}
+#zebra1 {
+    background-color: #00bfa5;
+    color:#ffffff;
+}
+#zebra2 {
+    background-color: #1de9b6;
+    color:gray;
+}
+#njobo, #njobo2, #njobo3 {
+    display: none; 
+    position: fixed; 
+    z-index: 5; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+#inputan, #inputan2, #gambar {
+    background-color: #fefefe;
+    margin: 5px auto;
+    border: 1px solid #888;
+    width: 40%; 
+    padding:20 20 20 20;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.simpan {
+    display: block;
+    background: #1de9b6; 
+    border-style: ridge; 
+    width:98%;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin: 5px auto;
+}
+.simpan:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.simpan:active {
+    background: #00bfa5;
+}
+#batal {
+    display: block;
+    float: right;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.txt {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    padding: 5 5 5 5;
+    margin: 0 0 5 0;
+}
+.mumuk {
+    width: 100px;
+}
+/*---------------------Untuk footer.css--------------------*/
+footer {  /*sikil*/
+     text-align: center;
+     color: white;
+     background: grey;
+}
